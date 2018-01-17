@@ -21,7 +21,10 @@ namespace Fakturki
         {
             // TODO: This line of code loads data into the 'fakturyDBDataSet.Naglowek' table. You can move, or remove it, as needed.
             this.naglowekTableAdapter.Fill(this.fakturyDBDataSet.Naglowek);
+        }
 
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

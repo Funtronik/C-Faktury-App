@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fakturyDBDataSet = new Fakturki.FakturyDBDataSet();
-            this.naglowekBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.naglowekTableAdapter = new Fakturki.FakturyDBDataSetTableAdapters.NaglowekTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nrFaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataFaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +39,14 @@
             this.razemNettoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razemBruttoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razemVatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.naglowekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fakturyDBDataSet = new Fakturki.FakturyDBDataSet();
+            this.naglowekTableAdapter = new Fakturki.FakturyDBDataSetTableAdapters.NaglowekTableAdapter();
+            this.dane1 = new Fakturki.Report.Dane();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fakturyDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naglowekBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakturyDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dane1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -73,20 +75,7 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(1264, 380);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // fakturyDBDataSet
-            // 
-            this.fakturyDBDataSet.DataSetName = "FakturyDBDataSet";
-            this.fakturyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // naglowekBindingSource
-            // 
-            this.naglowekBindingSource.DataMember = "Naglowek";
-            this.naglowekBindingSource.DataSource = this.fakturyDBDataSet;
-            // 
-            // naglowekTableAdapter
-            // 
-            this.naglowekTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -143,6 +132,25 @@
             this.razemVatDataGridViewTextBoxColumn.HeaderText = "Razem_Vat";
             this.razemVatDataGridViewTextBoxColumn.Name = "razemVatDataGridViewTextBoxColumn";
             // 
+            // naglowekBindingSource
+            // 
+            this.naglowekBindingSource.DataMember = "Naglowek";
+            this.naglowekBindingSource.DataSource = this.fakturyDBDataSet;
+            // 
+            // fakturyDBDataSet
+            // 
+            this.fakturyDBDataSet.DataSetName = "FakturyDBDataSet";
+            this.fakturyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // naglowekTableAdapter
+            // 
+            this.naglowekTableAdapter.ClearBeforeFill = true;
+            // 
+            // dane1
+            // 
+            this.dane1.DataSetName = "Dane";
+            this.dane1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Historia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,8 +161,9 @@
             this.Text = "Historia";
             this.Load += new System.EventHandler(this.Historia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fakturyDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naglowekBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fakturyDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dane1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +183,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn razemNettoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn razemBruttoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn razemVatDataGridViewTextBoxColumn;
+        private Report.Dane dane1;
     }
 }
