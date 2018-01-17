@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.itemsDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dane = new Fakturki.Report.Dane();
             this.headerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -60,12 +60,12 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.itemsDataTableBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.headerBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.itemsDataTableBindingSource;
+            reportDataSource4.Name = "DataSet2";
+            reportDataSource4.Value = this.headerBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Fakturki.Report.Report1.rdlc";
             this.reportViewer1.LocalReport.ReportPath = "C:\\Users\\mjk\\Documents\\Visual Studio 2017\\Projects\\Fakturki\\Fakturki\\Report\\Repor" +
     "t1.rdlc";
@@ -82,6 +82,7 @@
             this.ClientSize = new System.Drawing.Size(684, 811);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Drukowanie";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Drukowanie_FormClosing);
             this.Load += new System.EventHandler(this.Drukowanie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.itemsDataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dane)).EndInit();

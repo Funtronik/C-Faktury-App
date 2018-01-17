@@ -22,6 +22,15 @@ namespace Fakturki
             this.Kopia = Kopia;
         }
 
+        private void Drukowanie_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string message = "Czy wydruk wygenerował się poprawnie ? Jeżeli nie, program pozwoli Ci wygenerować go jeszcze raz.";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            result = MessageBox.Show(message, "", buttons);
+            if (result == System.Windows.Forms.DialogResult.No) e.Cancel = true;
+        }
+
         private void Drukowanie_Load(object sender, EventArgs e)
         {
             itemsDataTableBindingSource.DataSource = this.dataSetFromSource.Tables["Items"];

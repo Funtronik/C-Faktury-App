@@ -170,7 +170,6 @@ C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\bin\Debug\pt\Microsoft.
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.csprojResolveAssemblyReference.cache
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.Drukowanie.resources
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.Form1.resources
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.Properties.Resources.resources
@@ -180,3 +179,7 @@ C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.exe.
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.application
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.exe
 C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.pdb
+C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.Historia.resources
+C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.csprojResolveAssemblyReference.cache
+C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\bin\Debug\FakturyDB.mdf
+C:\Users\mjk\Documents\GitHub\Fakturki\Fakturki\Fakturki\bin\Debug\FakturyDB_log.ldf

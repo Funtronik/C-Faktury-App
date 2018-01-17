@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Resources;
+using System.Data.SqlClient;
 
 namespace Fakturki
 {
@@ -18,6 +19,8 @@ namespace Fakturki
         static DataTable Zawartosci = new DataTable();
         Thread ShowStatus;
         StatusWorker StatusWorker = new StatusWorker();
+        SqlConnection con = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
 
         public Form1()
         {
@@ -25,7 +28,14 @@ namespace Fakturki
             StatusWorker.przekazanyLabel = this.toolStripStatusLabel1;
             KolumnyNiesotrowalne();
             wypelnijNR();
-
+            makeConnection();
+        }
+        private void makeConnection()
+        {
+            string Path = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Environment.CurrentDirectory + @"\FakturyDB.mdf;Integrated Security=True";
+            con = new SqlConnection(Path);
+            cmd.Connection = con;
+            cmd.CommandType = System.Data.CommandType.Text;
         }
         private void wypelnijNR()
         {
@@ -227,18 +237,18 @@ namespace Fakturki
             {
                 razemVat += double.Parse(item.Cells["Vat"].Value.ToString());
             }
-                dane1.Tables["Header"].Rows.Add(
-                fanr,
-                dateTimePicker1.Value.Date.ToString("d"),
-                dateTimePicker2.Value.Date.ToString("d"),
-                textBox2.Text.ToString(),
-                textBox3.Text.ToString(),
-                textBox1.Text.ToString(),
-                comboBox1.Text.ToString(),
-                labelRazemNetto.Text.ToString(),
-                razemVat.ToString(),
-                labelRazemBrutto.Text.ToString()
-                );
+            dane1.Tables["Header"].Rows.Add(
+            fanr,
+            dateTimePicker1.Value.Date.ToString("d"),
+            dateTimePicker2.Value.Date.ToString("d"),
+            textBox2.Text.ToString(),
+            textBox3.Text.ToString(),
+            textBox1.Text.ToString(),
+            comboBox1.Text.ToString(),
+            labelRazemNetto.Text.ToString(),
+            razemVat.ToString(),
+            labelRazemBrutto.Text.ToString()
+            );
             foreach (DataGridViewRow item in dataGridView1.Rows)
             {
                 dane1.Tables["Items"].Rows.Add(
@@ -259,6 +269,30 @@ namespace Fakturki
             Fakturki.Drukowanie Drukowanko = new Drukowanie(dane1, fanr, "Oryginal");
             Drukowanko.Show();
             dodajOstatniNrFa();
+
+            con.Open();
+            cmd.CommandText = @"INSERT INTO NAGLOWEK" +
+                @"(Nr_Fa," +
+                @"Data_Fa," +
+                @"Termin_Platnosci," +
+                @"Dane_Klienta," +
+                @"Forma_Zaplaty," +
+                @"Razem_Netto," +
+                @"Razem_Brutto," +
+                @"Razem_Vat)" +
+                @"VALUES ('" +
+                fanr + "','" +
+                dateTimePicker1.Value.Date.ToString("d") + "','" +
+                dateTimePicker2.Value.Date.ToString("d") + "','" +
+                textBox2.Text.ToString() + " " +
+                textBox3.Text.ToString() + " " +
+                textBox1.Text.ToString() + "','" +
+                comboBox1.Text.ToString() + "','" +
+                labelRazemNetto.Text.ToString() + "','" +
+                labelRazemBrutto.Text.ToString() + "','" +
+                razemVat.ToString() + " PLN')";
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -283,6 +317,12 @@ namespace Fakturki
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Fakturki.Historia Historia =  new Historia();
+            Historia.Show();
         }
     }
 }

@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fakturki.exe" size="1973152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Fakturki.exe" size="2016160">
       <assemblyIdentity name="Fakturki" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X48DdFR8/z6Wp9lI9ThyNwizbnLXgxuhAiHeBhbe1M0=</dsig:DigestValue>
+        <dsig:DigestValue>hwsdqmtX+GFRP+d4jQWTthZ+KUliBTsCpu61ZkhrRCw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -965,13 +965,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Fakturki.exe.config" size="189">
+  <file name="Fakturki.exe.config" size="572">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+      <dsig:DigestValue>iUSwu1k9uErYjP5dS1Mlegy7dZams/K3teq2LgFZXO0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="FakturyDB.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gqf818zPtYxWVK9Li7Q2/2A4nzzb+5JxU9VJdmdry8U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="FakturyDB_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TkQKA2rUEq972K3J12ibYoTq6PS5m5XVGkDfJZgmKGs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\drukarka.gif" size="77">
