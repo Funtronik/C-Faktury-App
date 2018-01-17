@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -71,11 +72,9 @@
             this.labelRazemNetto = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.dane1 = new Fakturki.Report.Dane();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -135,6 +134,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(243, 608);
             this.panel1.TabIndex = 3;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(13, 574);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(210, 23);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Wyczyść wszystko";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // groupBox2
             // 
@@ -471,7 +480,6 @@
             this.panel5.Controls.Add(this.labelRazemNetto);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(243, 580);
             this.panel5.Name = "panel5";
@@ -481,7 +489,7 @@
             // labelRazemBrutto
             // 
             this.labelRazemBrutto.AutoSize = true;
-            this.labelRazemBrutto.Location = new System.Drawing.Point(824, 23);
+            this.labelRazemBrutto.Location = new System.Drawing.Point(824, 27);
             this.labelRazemBrutto.Name = "labelRazemBrutto";
             this.labelRazemBrutto.Size = new System.Drawing.Size(10, 13);
             this.labelRazemBrutto.TabIndex = 4;
@@ -490,7 +498,7 @@
             // labelRazemNetto
             // 
             this.labelRazemNetto.AutoSize = true;
-            this.labelRazemNetto.Location = new System.Drawing.Point(557, 22);
+            this.labelRazemNetto.Location = new System.Drawing.Point(824, 10);
             this.labelRazemNetto.Name = "labelRazemNetto";
             this.labelRazemNetto.Size = new System.Drawing.Size(10, 13);
             this.labelRazemNetto.TabIndex = 3;
@@ -500,7 +508,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label8.Location = new System.Drawing.Point(731, 23);
+            this.label8.Location = new System.Drawing.Point(731, 27);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 2;
@@ -510,21 +518,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(467, 22);
+            this.label7.Location = new System.Drawing.Point(734, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Razem Netto:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(10, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 16);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Do zapłaty";
             // 
             // dane1
             // 
@@ -547,16 +545,6 @@
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Visible = false;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(13, 574);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(210, 23);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Wyczyść wszystko";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 
@@ -610,7 +598,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelRazemBrutto;
         private System.Windows.Forms.Label labelRazemNetto;
         private System.Windows.Forms.Label label8;

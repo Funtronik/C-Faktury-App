@@ -269,11 +269,12 @@ namespace Fakturki
                 ShowStatus.Start();
                 button5.Enabled = true;
             }
+            else button5.Enabled = false;
         }
         private bool sprawdzanie()
         {
-            if (textNr.Text == "" && textMiesiac.Text == "" && textRok.Text == "") { ShowStatus = new Thread(StatusWorker.ErrorNrDok); ShowStatus.Start(); return false; }
-            if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "") { ShowStatus = new Thread(StatusWorker.ErrorKlient); ShowStatus.Start(); return false; }
+            if (textNr.Text == "" || textMiesiac.Text == "" || textRok.Text == "") { ShowStatus = new Thread(StatusWorker.ErrorNrDok); ShowStatus.Start(); return false; }
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "") { ShowStatus = new Thread(StatusWorker.ErrorKlient); ShowStatus.Start(); return false; }
             if (comboBox1.Text == "Wybierz...") { ShowStatus = new Thread(StatusWorker.ErrorFormaPlatnosci); ShowStatus.Start(); return false; }
             if (dataGridView1.Rows.Count == 0) { ShowStatus = new Thread(StatusWorker.ErrorBrakMaterialow); ShowStatus.Start(); return false; }
             return true;
