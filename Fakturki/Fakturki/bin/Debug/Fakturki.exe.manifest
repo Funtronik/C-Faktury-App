@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Fa8leVleReF86kSmE++R39ksPJS/LqqsLECW9/GBAHY=</dsig:DigestValue>
+        <dsig:DigestValue>3J8tGPb6y9rfxkCELK1bVQcOR5wiA+3aFwVkT7mWYnw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -980,7 +980,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Pnc4Vv5v2v9NjNvKTrpNDl+l3/M3BIxrNa+RvnXuHZY=</dsig:DigestValue>
+      <dsig:DigestValue>PLejhWk0XVHfLKfl5eFrunox5JjrS326iwR8sZHLB48=</dsig:DigestValue>
     </hash>
   </file>
   <file name="FakturyDB_log.ldf" size="8388608" writeableType="applicationData">
@@ -989,7 +989,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>RjjZuLSUnXOACNu/rP69ohJ5VZUDBW+nAlReNvh6U/0=</dsig:DigestValue>
+      <dsig:DigestValue>gEyZr8i/U0GxXCGBDApYQKpekq6Gu2eA49uUOGnEWJY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\drukarka.gif" size="77">

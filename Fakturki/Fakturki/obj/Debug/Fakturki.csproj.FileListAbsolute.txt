@@ -189,7 +189,6 @@ C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.Form1.resources
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.Historia.resources
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.Properties.Resources.resources
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.csproj.GenerateResource.cache
-C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.csproj.CoreCompileInputs.cache
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.exe
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.pdb
 C:\Workspace\Fakturki\Fakturki\Fakturki\bin\Debug\FakturyDB.mdf
@@ -278,3 +277,5 @@ C:\Workspace\Fakturki\Fakturki\Fakturki\bin\Debug\zh-CHT\Microsoft.ReportViewer.
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.exe.manifest
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.application
 C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\Fakturki.csproj.CopyComplete
+C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\RdlCompile.cache
+C:\Workspace\Fakturki\Fakturki\Fakturki\obj\Debug\RdlCompile.compiled
